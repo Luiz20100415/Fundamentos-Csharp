@@ -79,6 +79,31 @@
 
 // Exercicio 4 
 
-Console.WriteLine("Digite um número: ");
+// SOMA
+// Console.WriteLine("Digite o primeiro número: ");
+// int numero1 = int.Parse(Console.ReadLine());
 
+// void CalcularSoma(int num1, int num2)
+// {
+//     int soma = num1 + num2;
+//     Console.WriteLine($"A soma de {num1} e {num2} é: {soma}");
+// }
 
+// Console.WriteLine("Digite o segundo número: ");
+// int numero2 = int.Parse(Console.ReadLine());
+
+// CalcularSoma(numero1, numero2);
+
+Console.WriteLine("Digite o primeiro número: ");
+int numero1 = int.Parse(Console.ReadLine());
+
+void CalcularMultiplicacao(int num1, int num2)
+{
+    int soma = num1 * num2;
+    Console.WriteLine($"A soma de {num1} e {num2} é: {soma}");
+}
+
+Console.WriteLine("Digite o segundo número: ");
+int numero2 = int.Parse(Console.ReadLine());
+
+CalcularMultiplicacao(numero1, numero2);
