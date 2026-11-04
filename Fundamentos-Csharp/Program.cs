@@ -94,16 +94,80 @@
 
 // CalcularSoma(numero1, numero2);
 
-Console.WriteLine("Digite o primeiro número: ");
-int numero1 = int.Parse(Console.ReadLine());
+// Console.WriteLine("Digite o primeiro número: ");
+// int numero1 = int.Parse(Console.ReadLine());
 
-void CalcularMultiplicacao(int num1, int num2)
+// void Multiplicacao(int num1, int num2)
+// {
+//     int Multiplicacao = num1 * num2;
+//     Console.WriteLine($"A multiplicação de {num1} e {num2} é: {Multiplicacao}");
+// }
+
+// Console.WriteLine("Digite o segundo número: ");
+// int numero2 = int.Parse(Console.ReadLine());
+
+// Multiplicacao(numero1, numero2);
+
+
+
+// EXERCICIO 5
+
+// int[] numeros = {8, 9, 10}; 
+
+// double[] notas = new double[3];
+
+// for (int i = 0; i < notas.Length; i++)
+// {
+//     Console.WriteLine($"Digite a nota do aluno {i + 1}:");
+//     notas[i] = double.Parse(Console.ReadLine());
+// }
+
+// foreach (double nota in notas)
+// {
+//     Console.WriteLine($"Nota: {nota}");
+// }
+
+// var media = notas.Average();
+// Console.WriteLine($"Média das notas: {media}");
+
+
+
+
+//EXERCICIO 6
+
+  List<string> produtos = new List<string>();
+
+for (int i = 1; i <= 3; i++)
 {
-    int soma = num1 * num2;
-    Console.WriteLine($"A soma de {num1} e {num2} é: {soma}");
-}
+    Console.Write($"Digite o nome do produto {i}: ");
+    string nome = Console.ReadLine();
+    produtos.Add(nome);
+ }
 
-Console.WriteLine("Digite o segundo número: ");
-int numero2 = int.Parse(Console.ReadLine());
+    Console.WriteLine("\nProdutos cadastrados:");
+foreach (string produto in produtos)
+    {
+     Console.WriteLine($"- {produto}");
+  }
 
-CalcularMultiplicacao(numero1, numero2);
+    Console.Write("\nDigite o nome de um produto para buscar: ");
+    string busca = Console.ReadLine();
+
+    if (produtos.Contains(busca))
+        Console.WriteLine($"O produto \"{busca}\" está na lista.");
+    else
+        Console.WriteLine($"O produto \"{busca}\" não está na lista.");
+
+    Console.Write("\nDigite o nome de um produto para remover: ");
+    string remover = Console.ReadLine();
+
+    if (produtos.Remove(remover))
+        Console.WriteLine($"Produto \"{remover}\" removido com sucesso.");
+    else
+        Console.WriteLine($"Produto \"{remover}\" não encontrado.");
+
+        Console.WriteLine("\nLista atualizada:");
+    foreach (string produto in produtos)
+    {
+        Console.WriteLine($"- {produto}");
+    }
